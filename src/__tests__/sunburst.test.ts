@@ -173,7 +173,7 @@ describe('Sunburst Visualization', () => {
     expect(fallbackArcs[2].style.fill).toBe('#EA4335');
   });
 
-  it('handles partial config (undefined value_format_override), center root hover, XSS-safe #endlabel, and drill clicks', () => {
+  it('handles partial config (undefined value_format_override), center root hover, plain-text #endlabel, and drill clicks', () => {
     vis.create(element, {});
     const drillMock = (global as any).LookerCharts.Utils.openDrillMenu as jest.Mock;
     drillMock.mockClear();

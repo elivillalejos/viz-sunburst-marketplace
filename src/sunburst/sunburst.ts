@@ -53,7 +53,7 @@ function descend(obj: any, depth: number = 0) {
 }
 
 function burrow(table: Row[], showNullPoints: boolean) {
-  // create nested null-prototype object to prevent Object.prototype key collisions
+  // create nested null-prototype object
   const obj: any = Object.create(null)
 
   table.forEach((row: Row) => {
